@@ -1,0 +1,19 @@
+[project]
+name = "minicompressor"
+version = "0.1.0"
+description = "A tiny LZSS + Huffman (mini-DEFLATE) file compressor, built from scratch."
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.scripts]
+minicompress = "minicompressor.cli:main"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["minicompressor*"]
